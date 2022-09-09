@@ -6,6 +6,7 @@ import {
 } from "../styles/Modal";
 
 import { useModalStore } from "../store/ModalStore";
+import { useSpring } from "react-spring";
 
 interface ModalProps {
   children: React.ReactNode;
@@ -14,11 +15,33 @@ interface ModalProps {
 const Modal = (props: ModalProps) => {
   const triggerModal = useModalStore((store) => store.triggerModal);
 
+  const animateBackdrop = useSpring({
+    from: {
+      marginTop: "-10rem",
+      opacity: 0,
+    },
+    to: {
+      marginTop: "0rem",
+      opacity: 1,
+    },
+  });
+
+  const animateContainer = useSpring({
+    from: {
+      marginTop: "-5rem",
+      opacity: 0,
+    },
+    to: {
+      marginTop: "0rem",
+      opacity: 1,
+    },
+  });
+
   return (
-    <BackDrop>
-      <ModalContainer>
+    <BackDrop style={animateBackdrop}>
+      <ModalContainer style={animateContainer}>
         <ModalHeader>
-          <CloseIcon onClick={triggerModal} />
+          <CloseIcon onClick={triggerModal} size={48} />
         </ModalHeader>
         {props.children}
       </ModalContainer>

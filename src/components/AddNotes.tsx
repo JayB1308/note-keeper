@@ -6,9 +6,9 @@ import {
   NoteInput,
   AddNoteButton,
 } from "../styles/AddNotes";
-import { ExtraLargeText } from "../styles/Typography";
-import JoditEditor from "jodit-react";
 
+import JoditEditor from "jodit-react";
+import { useSpring } from "react-spring";
 import { useNoteStore } from "../store/NotesStore";
 import { useModalStore } from "../store/ModalStore";
 import { addDoc } from "@firebase/firestore";
@@ -20,6 +20,8 @@ const AddNotes = () => {
   const [tagline, setTagline] = useState("");
   const [body, setBody] = useState("");
   const [color, setColor] = useState("");
+
+  const [hover, setHover] = useState<boolean>(false);
 
   const notesRef = useNoteStore((store) => store.notesRef);
   const setLoading = useNoteStore((store) => store.setLoading);
@@ -61,9 +63,14 @@ const AddNotes = () => {
     theme: "dark",
   };
 
+  const animateHoverButton = useSpring({
+    backgroundColor: hover ? "#252525" : "#ffb703",
+    color: !hover ? "#252525" : "#ffb703",
+  });
+
   return (
     <NoteContainer>
-      <ExtraLargeText>Add A New Note</ExtraLargeText>
+      <h4>Add New Note</h4>
       <NoteForm>
         <NoteInput
           type="text"
@@ -89,11 +96,18 @@ const AddNotes = () => {
           />
         </EditorContainer>
         <AddNoteButton
+          onMouseEnter={() => {
+            setHover(true);
+          }}
+          onMouseLeave={() => {
+            setHover(false);
+          }}
           type="submit"
           onClick={(e) => {
             e.preventDefault();
             createNote();
           }}
+          style={animateHoverButton}
         >
           Add note
         </AddNoteButton>

@@ -1,8 +1,11 @@
 import styled from "styled-components";
+
 import { AiOutlineFileAdd } from "react-icons/ai";
 import { BsSearch } from "react-icons/bs";
 
-export const NavContainer = styled.nav`
+import { animated } from "react-spring";
+
+export const NavContainer = styled(animated.nav)`
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -19,8 +22,9 @@ export const NavLogoContainer = styled.div`
 
 export const NavText = styled.h1`
   font-family: "Pacifico", cursive;
-  font-size: 3rem;
-  color: #ffb703;
+  font-size: ${(props) => props.theme.fontSize.xxLarge};
+  color: ${(props) => props.theme.color.primary};
+  margin-left: 15%;
 `;
 
 export const NavButtons = styled.div`
@@ -31,32 +35,20 @@ export const NavButtons = styled.div`
   margin-right: 1rem;
 `;
 
-export const AddNotesButton = styled.button`
+export const AddNotesButton = styled(animated.button)`
   display: flex;
   border: none;
   align-items: center;
   justify-content: space-between;
-  font-size: 1.25rem;
   font-weight: 300;
-  width: 55%;
+  width: 75%;
+  font-size: ${(props) => props.theme.fontSize.medium};
   border-radius: 0.25rem;
   padding: 1rem;
   border-radius: 0.45rem;
   cursor: pointer;
-  background-color: #3a86ff;
-  color: white;
-`;
-
-export const SearchButton = styled.button`
-  display: flex;
-  align-items: center;
-  font-size: 2rem;
-  padding: 1rem;
-  border-radius: 0.45rem;
-  border: none;
-  cursor: pointer;
-  background-color: #3b3b3b;
-  color: white;
+  background-color: ${(props) => props.theme.color.secondary};
+  color: ${(props) => props.theme.color.fontColor};
 `;
 
 export const AddIcon = styled(AiOutlineFileAdd)`

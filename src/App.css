@@ -13,7 +13,6 @@ body {
 }
 
 /* Loading-Animation */
-
 .loader-container {
   display: flex;
   flex-direction: column;

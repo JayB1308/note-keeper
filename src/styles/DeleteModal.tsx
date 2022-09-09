@@ -1,23 +1,54 @@
 import styled from "styled-components";
+import { animated } from "react-spring";
 
-export const DeleteModalContainer = styled.div`
+export const DeleteModalContainer = styled(animated.div)`
   width: 50%;
-  height: 25%;
+  height: 35%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: #fff;
+  background-color: ${(props) => props.theme.color.mainBackground};
+  box-shadow: 0px 5px 10px ${(props) => props.theme.color.primary};
+
+  & h3 {
+    font-size: ${(props) => props.theme.fontSize.xLarge};
+    color: ${(props) => props.theme.color.primary};
+    margin-top: -1rem;
+  }
 `;
 
 export const DeleteModalFooter = styled.div`
   display: flex;
-  width: 50%;
+  width: 75%;
   align-items: center;
   justify-content: space-between;
-  margin: 1rem 2rem;
 `;
 
-export const DeleteButton = styled.button``;
+export const DeleteButton = styled.button`
+  width: 40%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: ${(props) => props.theme.color.primary};
+  color: ${(props) => props.theme.color.fontColor};
+  font-size: ${(props) => props.theme.fontSize.medium};
+  border-radius: 0.5rem;
+  padding: 0.75rem 1rem;
+  border: 2px solid ${(props) => props.theme.color.primary};
+  outline: none;
+`;
 
-export const CancelButton = styled.div``;
+export const CancelButton = styled.div`
+  width: 40%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: ${(props) => props.theme.color.mainBackground};
+  color: ${(props) => props.theme.color.primary};
+  font-size: ${(props) => props.theme.fontSize.medium};
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
+  border: 2px solid ${(props) => props.theme.color.primary};
+  outline: none;
+`;

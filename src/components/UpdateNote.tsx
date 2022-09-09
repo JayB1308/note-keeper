@@ -1,5 +1,4 @@
 import React, { Dispatch, SetStateAction, useState } from "react";
-import { ExtraLargeText } from "../styles/Typography";
 import { toast } from "react-hot-toast";
 import {
   CancelButton,
@@ -14,7 +13,7 @@ import { db } from "../services/firebase-config";
 import { doc, updateDoc } from "@firebase/firestore";
 import { useNoteStore } from "../store/NotesStore";
 import { useModalStore } from "../store/ModalStore";
-
+import { useSpring } from "react-spring";
 interface UpdateProps {
   note: any;
   setEdit: Dispatch<SetStateAction<any>>;
@@ -54,9 +53,20 @@ const UpdateNote = ({ note, setEdit }: UpdateProps) => {
     close();
   };
 
+  const animatedContainer = useSpring({
+    from: {
+      marginTop: "-5rem",
+      opacity: 0,
+    },
+    to: {
+      marginTop: "0rem",
+      opacity: 1,
+    },
+  });
+
   return (
-    <UpdateContainer>
-      <ExtraLargeText>Update Note</ExtraLargeText>
+    <UpdateContainer style={animatedContainer}>
+      <h3>Update Your Note</h3>
       <UpdateForm>
         <UpdateInput
           type="text"

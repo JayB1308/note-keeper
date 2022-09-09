@@ -1,7 +1,8 @@
 import styled from "styled-components";
 import { AiOutlineClose } from "react-icons/ai";
+import { animated } from "react-spring";
 
-export const BackDrop = styled.div`
+export const BackDrop = styled(animated.div)`
   position: absolute;
   z-index: 100;
   width: 100%;
@@ -12,16 +13,16 @@ export const BackDrop = styled.div`
   background-color: rgba(0, 0, 0, 0.6);
 `;
 
-export const ModalContainer = styled.div`
+export const ModalContainer = styled(animated.div)`
   width: 80%;
   height: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 3rem 1.25rem;
+  padding: 1rem 1.25rem;
   border-radius: 0.5rem;
   box-shadow: 1px 2px 10px gray;
-  background-color: #252525;
+  background-color: ${(props) => props.theme.color.mainBackground};
 `;
 
 export const ModalHeader = styled.div`
@@ -32,5 +33,5 @@ export const ModalHeader = styled.div`
 `;
 
 export const CloseIcon = styled(AiOutlineClose)`
-  font-size: 2rem;
+  color: ${(props) => props.theme.color.primary};
 `;

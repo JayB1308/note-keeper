@@ -25,6 +25,7 @@ import { useModalStore } from "../store/ModalStore";
 
 import UpdateNote from "./UpdateNote";
 import DeleteModal from "./DeleteModal";
+import { useSpring } from "react-spring";
 
 const OpenedNote = () => {
   const note = useNoteStore((store) => store.currentNote);
@@ -33,11 +34,31 @@ const OpenedNote = () => {
   const [edit, setEdit] = useState<boolean>(false);
   const [deleteModal, setDeleteModal] = useState<boolean>(false);
 
+  const animateBackdrop = useSpring({
+    from: {
+      opacity: 0,
+    },
+    to: {
+      opacity: 1,
+    },
+  });
+
+  const animateContainer = useSpring({
+    from: {
+      marginTop: "-2rem",
+      opacity: 0,
+    },
+    to: {
+      marginTop: "0rem",
+      opacity: 1,
+    },
+  });
+
   return (
-    <BackDrop>
+    <BackDrop style={animateBackdrop}>
       {edit && <UpdateNote note={note} setEdit={setEdit} />}
       {deleteModal && <DeleteModal id={note.id} setDelete={setDeleteModal} />}
-      <OpenedNoteContainer>
+      <OpenedNoteContainer style={animateContainer}>
         <OpenNoteBar>
           <BarSection>
             <BackButton>
@@ -51,7 +72,7 @@ const OpenedNote = () => {
                 setEdit(true);
               }}
             >
-              <MdEdit size={36} />
+              <MdEdit size={36} color={"#4361ee"} />
             </EditButton>
             <DeleteButton
               onClick={(e) => {
@@ -59,7 +80,7 @@ const OpenedNote = () => {
                 setDeleteModal(true);
               }}
             >
-              <AiFillDelete size={36} />
+              <AiFillDelete size={36} color={"#d00000"} />
             </DeleteButton>
           </RightBarSection>
         </OpenNoteBar>
