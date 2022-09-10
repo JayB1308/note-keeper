@@ -26,7 +26,7 @@ const Navbar = () => {
   });
 
   const animatedButton = useSpring({
-    width: hover ? "75%" : "15%",
+    width: hover ? "75%" : "20%",
     fontSize: hover ? "1.5rem" : "0rem",
     justifyContent: hover ? "space-between" : "center",
   });
@@ -47,7 +47,7 @@ const Navbar = () => {
           }}
           onClick={openNote}
         >
-          <AddIcon />
+          <AddIcon size={36} />
           {hover ? "Add New Note" : ""}
         </AddNotesButton>
       </NavButtons>

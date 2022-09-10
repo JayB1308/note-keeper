@@ -41,7 +41,7 @@ const Modal = (props: ModalProps) => {
     <BackDrop style={animateBackdrop}>
       <ModalContainer style={animateContainer}>
         <ModalHeader>
-          <CloseIcon onClick={triggerModal} size={48} />
+          <CloseIcon onClick={triggerModal} size={30} />
         </ModalHeader>
         {props.children}
       </ModalContainer>

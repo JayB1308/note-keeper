@@ -11,17 +11,18 @@ export const BackDrop = styled(animated.div)`
   align-items: center;
   justify-content: center;
   background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(3px);
 `;
 
 export const ModalContainer = styled(animated.div)`
-  width: 80%;
+  width: 75%;
   height: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 1rem 1.25rem;
+  padding: 0.5rem 0.25rem;
   border-radius: 0.5rem;
-  box-shadow: 1px 2px 10px gray;
+  box-shadow: 1px 2px 10px ${(props) => props.theme.color.primary};
   background-color: ${(props) => props.theme.color.mainBackground};
 `;
 
@@ -30,6 +31,7 @@ export const ModalHeader = styled.div`
   width: 90%;
   justify-content: flex-end;
   align-items: center;
+  margin-top: 1%;
 `;
 
 export const CloseIcon = styled(AiOutlineClose)`

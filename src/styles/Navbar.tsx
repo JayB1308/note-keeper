@@ -10,7 +10,6 @@ export const NavContainer = styled(animated.nav)`
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  height: 10%;
 `;
 
 export const NavLogoContainer = styled.div`
@@ -22,7 +21,7 @@ export const NavLogoContainer = styled.div`
 
 export const NavText = styled.h1`
   font-family: "Pacifico", cursive;
-  font-size: ${(props) => props.theme.fontSize.xxLarge};
+  font-size: ${(props) => props.theme.fontSize.xLarge};
   color: ${(props) => props.theme.color.primary};
   margin-left: 15%;
 `;
@@ -41,8 +40,8 @@ export const AddNotesButton = styled(animated.button)`
   align-items: center;
   justify-content: space-between;
   font-weight: 300;
-  width: 75%;
-  font-size: ${(props) => props.theme.fontSize.medium};
+  width: 60%;
+  font-size: ${(props) => props.theme.fontSize.small};
   border-radius: 0.25rem;
   padding: 1rem;
   border-radius: 0.45rem;

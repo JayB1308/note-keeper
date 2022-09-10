@@ -5,13 +5,13 @@ export const NotesContainer = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-top: -2.5rem;
+  margin-top: -1.5rem;
   width: 100%;
 `;
 
 export const NotesGrid = styled.div`
   display: grid;
   width: 90%;
-  gap: 1rem;
+  gap: 0.5rem;
   grid-template-columns: repeat(3, 1fr);
 `;

@@ -4,9 +4,9 @@ import { animated } from "react-spring";
 export const NoteItem = styled(animated.div)<{ color: string }>`
   display: flex;
   flex-direction: column;
-  width: 350px;
+  width: 250px;
   border-radius: 0.95rem;
-  height: 250px;
+  height: 150px;
   margin: 1rem;
   padding: 0.5rem 2rem;
   background-color: ${({ color }) => {
@@ -25,9 +25,9 @@ export const PinContainer = styled.div`
 `;
 
 export const NoteTitle = styled.h1`
-  font-size: ${(props) => props.theme.fontSize.large};
+  font-size: ${(props) => props.theme.fontSize.medium};
   font-weight: 400;
-  width: 60%;
+  width: 90%;
   display: flex;
   justify-content: space-between;
   margin-top: -2%;
@@ -35,7 +35,7 @@ export const NoteTitle = styled.h1`
 `;
 
 export const NoteTagline = styled.p`
-  font-size: ${(props) => props.theme.fontSize.medium};
+  font-size: ${(props) => props.theme.fontSize.small};
   font-weight: 500;
   width: 95%;
   margin-top: -1rem;

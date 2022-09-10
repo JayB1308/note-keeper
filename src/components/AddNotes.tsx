@@ -58,9 +58,10 @@ const AddNotes = () => {
 
   const config = {
     width: "100%",
-    height: "350px",
+    height: "250px",
     readOnly: false,
     theme: "dark",
+    placeholder: "Type Something And Click Outside The Editor To Save!",
   };
 
   const animateHoverButton = useSpring({

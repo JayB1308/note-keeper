@@ -72,7 +72,7 @@ const OpenedNote = () => {
                 setEdit(true);
               }}
             >
-              <MdEdit size={36} color={"#4361ee"} />
+              <MdEdit size={24} color={"#4361ee"} />
             </EditButton>
             <DeleteButton
               onClick={(e) => {
@@ -80,7 +80,7 @@ const OpenedNote = () => {
                 setDeleteModal(true);
               }}
             >
-              <AiFillDelete size={36} color={"#d00000"} />
+              <AiFillDelete size={24} color={"#d00000"} />
             </DeleteButton>
           </RightBarSection>
         </OpenNoteBar>

@@ -31,7 +31,7 @@ const UpdateNote = ({ note, setEdit }: UpdateProps) => {
 
   const config = {
     width: "100%",
-    height: "350px",
+    height: "250px",
     readOnly: false,
     theme: "dark",
   };

@@ -8,13 +8,14 @@ export const UpdateContainer = styled(animated.div)`
   align-items: center;
   padding: 0.5rem 0.5rem;
   background-color: ${(props) => props.theme.color.mainBackground};
-  width: 50%;
+  width: 60%;
   z-index: 200;
-  top: 3%;
-  box-shadow: 0px 5px 15px ${(props) => props.theme.color.primary};
+  top: 4%;
+  box-shadow: 0px 2px 10px ${(props) => props.theme.color.primary};
 
   & h3 {
-    font-size: ${(props) => props.theme.fontSize.xLarge};
+    font-size: ${(props) => props.theme.fontSize.large};
+    font-weight: 400;
     color: ${(props) => props.theme.color.primary};
   }
 `;
@@ -22,14 +23,15 @@ export const UpdateContainer = styled(animated.div)`
 export const UpdateForm = styled.form`
   display: flex;
   flex-direction: column;
-  width: 75%;
+  align-items: center;
   margin-top: -2rem;
+  width: 75%;
 `;
 
 export const UpdateInput = styled.input`
   width: 100%;
   padding: 0.5rem;
-  font-size: ${(props) => props.theme.fontSize.large};
+  font-size: ${(props) => props.theme.fontSize.medium};
   color: ${(props) => props.theme.color.fontColor};
   border: none;
   outline: none;
@@ -43,7 +45,7 @@ export const UpdateFormFooter = styled.div`
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  margin: 2rem auto;
+  margin: 0.75rem auto;
 `;
 
 export const UpdateButton = styled.button`

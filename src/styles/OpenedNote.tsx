@@ -6,15 +6,16 @@ import { animated } from "react-spring";
 export const OpenedNoteContainer = styled(animated.div)`
   display: flex;
   width: 75%;
-  height: 50%;
+  height: auto;
   flex-direction: column;
   align-items: center;
+  padding: 1rem 0rem;
   background-color: ${(props) => props.theme.color.mainBackground};
 `;
 
 export const OpenNoteBar = styled.div`
   width: 90%;
-  padding: 2rem 0.5rem;
+  padding: 1rem 0.5rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -49,8 +50,8 @@ export const BackButton = styled.button`
 `;
 
 export const NoteTitle = styled.h1`
-  font-size: ${(props) => props.theme.fontSize.xxLarge};
-  width: 60%;
+  font-size: ${(props) => props.theme.fontSize.large};
+  width: 80%;
   font-weight: 300;
   color: ${(props) => props.theme.color.primary};
 `;
@@ -77,7 +78,7 @@ export const DeleteButton = styled.button`
   border: 2px solid ${(props) => props.theme.color.primary};
   outline: none;
   border-radius: 0.5rem;
-  font-size: 1.15rem;
+  font-size: 1rem;
 `;
 
 export const EditIcon = styled(MdEdit)`

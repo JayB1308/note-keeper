@@ -34,10 +34,14 @@ const Pagination = ({
   };
 
   const animatePageChangerLeft = useSpring({
-    marginTop: hoverLeft ? "-1.5rem" : "0rem",
+    marginTop: hoverLeft ? "-0.75rem" : "0rem",
+    color: hoverLeft ? "#252525" : "#ffb703",
+    backgroundColor: hoverLeft ? "#ffb703" : "#252525",
   });
   const animatePageChangerRight = useSpring({
-    marginTop: hoverRight ? "-1.5rem" : "0rem",
+    marginTop: hoverRight ? "-0.75rem" : "0rem",
+    color: hoverRight ? "#252525" : "#ffb703",
+    backgroundColor: hoverRight ? "#ffb703" : "#252525",
   });
   const animatePageNumber = useSpring({
     color: hoverNumber ? "#252525" : "#ffb703",
@@ -68,6 +72,9 @@ const Pagination = ({
               onClick={(e) => {
                 e.preventDefault();
                 setCurrentPage(pgNum);
+              }}
+              onMouseLeave={() => {
+                setHoverNumber(false);
               }}
             >
               {pgNum}

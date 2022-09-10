@@ -18,6 +18,7 @@ import Pagination from "./components/Pagination";
 import { db } from "./services/firebase-config";
 import { collection, getDocs } from "firebase/firestore";
 import OpenedNote from "./components/OpenedNote";
+import NoNotes from "./components/NoNotes";
 
 function App() {
   const newNote = useModalStore((store) => store.newNote);
@@ -91,12 +92,16 @@ function App() {
         {search && <Modal children={<Search />} />}
         {open && <OpenedNote />}
         <Navbar />
-        <Notes notes={currentRecords} />
-        <Pagination
-          nPages={nPages}
-          currentPage={currentPage}
-          setCurrentPage={setCurrentPage}
-        />
+        {notes.length === 0 ? <NoNotes /> : <Notes notes={currentRecords} />}
+        {notes.length === 0 ? (
+          ""
+        ) : (
+          <Pagination
+            nPages={nPages}
+            currentPage={currentPage}
+            setCurrentPage={setCurrentPage}
+          />
+        )}
       </AppContainer>
     </ThemeProvider>
   );

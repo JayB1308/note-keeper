@@ -7,7 +7,7 @@ export const PaginationContainer = styled.div`
   align-items: center;
   justify-content: center;
   position: absolute;
-  bottom: 1%;
+  bottom: 2%;
 `;
 
 export const PaginationMenu = styled.div`
@@ -20,8 +20,8 @@ export const PaginationMenu = styled.div`
 
 export const PageChangeButtons = styled(animated.button)`
   border-radius: 50%;
-  font-size: ${(props) => props.theme.fontSize.xLarge};
-  width: 6%;
+  font-size: ${(props) => props.theme.fontSize.medium};
+  width: 5%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -39,6 +39,7 @@ export const PageNumbers = styled(animated.div)`
   color: ${(props) => props.theme.color.primary};
   background-color: ${(props) => props.theme.color.mainBackground};
   border: 2px solid ${(props) => props.theme.color.primary};
+  border-radius: 1rem;
 `;
 
 export const ActivePageNumbers = styled(animated.div)`
@@ -51,4 +52,5 @@ export const ActivePageNumbers = styled(animated.div)`
   background-color: ${(props) => props.theme.color.primary};
   color: ${(props) => props.theme.color.mainBackground};
   border: 2px solid ${(props) => props.theme.color.primary};
+  border-radius: 1rem;
 `;
