@@ -1,46 +1,42 @@
-# Getting Started with Create React App
+ # Deployed Link : https://fantastic-duckanoo-7101ec.netlify.app/
+ 
+ # Note Keeper
+ 
+A simple note keeping application, any user can ADD, UPDATE and DELETE notes. They can pin notes to have them appear before other notes.
+ 
+ ## ADD NOTES:
+ 
+ <img width="957" alt="image" src="https://user-images.githubusercontent.com/63632862/189481200-8bd03e72-6fe8-43b9-bfd2-7871efa986d8.png">
+ Click on the button to open a modal and add a note
+ 
+ <img width="902" alt="image" src="https://user-images.githubusercontent.com/63632862/189481221-a091f119-3c34-471d-88bf-80055d1ab178.png">
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<strong>After adding title and tagline, start typing in the editor and to save it click outside the editor.</strong>
 
-## Available Scripts
+## UPDATE AND DELETE NOTE:
 
-In the project directory, you can run:
+<strong>Click on any note to open it</strong>
 
-### `yarn start`
+<img width="885" alt="image" src="https://user-images.githubusercontent.com/63632862/189481321-f8c89446-4e94-415b-8b2e-c05b7665f5f0.png">
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+The blue button is the edit button, click on it to open the edit modal
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+<img width="667" alt="image" src="https://user-images.githubusercontent.com/63632862/189481351-4896de06-ede5-4937-80ac-f9c88e75794f.png">
 
-### `yarn test`
+The red button is the delete button, clicking it will open the delete modal 
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+<img width="632" alt="image" src="https://user-images.githubusercontent.com/63632862/189481379-49c0850a-48dd-4022-bde8-3a73728f4fd1.png">
 
-### `yarn build`
+## PINNING NOTES:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+<strong>Click on the pin icon to tag the note as favourite, it will move the note up the list</strong>
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+<img width="568" alt="image" src="https://user-images.githubusercontent.com/63632862/189481487-f5b3dc37-c5ec-4e37-9df4-f6c9a5569527.png">
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+<img width="922" alt="image" src="https://user-images.githubusercontent.com/63632862/189481521-d2fa299e-1da5-457c-9eea-8938738aa988.png">
 
-### `yarn eject`
+<strong>Before clicking the pin</strong>
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+<img width="894" alt="image" src="https://user-images.githubusercontent.com/63632862/189481549-f8789830-f669-4a83-8256-c058204bb116.png">
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+After clicking the pin icon Note#2 moves up the list.
